@@ -21,15 +21,15 @@ struct CombinationOnPascal{
             }
         }
     int C(int n,int r){
-        assert(0<=n&&n<MAX&&0<=r&&r<MAX);
+        if(n<0||r<0||n<r) return 0;
         return COM[n][r];
     }
     int P(int n,int r){
-        assert(0<=n&&n<MAX&&0<=r&&r<MAX);
+        if(n<0||r<0||n<r) return 0;
         return PER[n][r];
     }
     int H(int n,int r){
-        assert(0<=n+r-1&&n+r-1<MAX&&0<=r&&r<MAX);
-        return COM[n+r-1][r];
+        if(r==0) return 1;
+        return C(n+r-1,r);
     }
 };
