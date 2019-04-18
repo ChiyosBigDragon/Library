@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int INF=1145141919;
 
 struct LevenshteinDistance{
+    const int INF=1145141919;
     const int costInsert,costErase,costReplace;
     LevenshteinDistance(int i,int e,int r):
         costInsert(i),costErase(e),costReplace(r)
