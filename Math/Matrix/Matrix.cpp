@@ -33,7 +33,7 @@ struct Matrix{
         }
         return ret;
     }
-    // 加算
+    // 加法
     Matrix &operator +=(const Matrix &_mat){
         int h=(*this).height(),w=(*this).width();
         assert(h==_mat.height()&&w==_mat.width());
@@ -44,10 +44,10 @@ struct Matrix{
         }
         return (*this);
     }
-    Matrix &operator +(const Matrix &_mat){
-        return (*this)+=_mat;
+    Matrix operator +(const Matrix &_mat) const{
+        return Matrix(*this)+=_mat;
     }
-    // 減算
+    // 減法
     Matrix &operator -=(const Matrix &_mat){
         int h=(*this).height(),w=(*this).width();
         assert(h==_mat.height()&&w==_mat.width());
@@ -58,10 +58,10 @@ struct Matrix{
         }
         return (*this);
     }
-    Matrix &operator -(const Matrix &_mat){
-        return (*this)-=_mat;
+    Matrix operator -(const Matrix &_mat) const{
+        return Matrix(*this)-=_mat;
     }
-    // 乗算
+    // 乗法
     Matrix &operator *=(const Matrix &_mat){
         int h=(*this).height(),w=(*this).width();
         int _h=_mat.height(),_w=_mat.width();
@@ -77,16 +77,16 @@ struct Matrix{
         mat=ret;
         return (*this);
     }
-    Matrix &operator *(const Matrix &_mat){
-        return (*this)*=_mat;
+    Matrix operator *(const Matrix &_mat) const{
+        return Matrix(*this)*=_mat;
     }
-    // 行列累乗
-    Matrix pow(long long n){
+    // 冪乗
+    Matrix pow(long long k){
         Matrix ret=I((*this).height(),1);
-        while(n>0){
-            if(n&1) ret*=(*this);
+        while(k>0){
+            if(k&1) ret*=(*this);
             (*this)*=(*this);
-            n>>=1ll;
+            k>>=1ll;
         }
         (*this)=ret;
         return (*this);

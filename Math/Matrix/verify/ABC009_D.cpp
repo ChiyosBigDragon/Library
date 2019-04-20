@@ -10,7 +10,7 @@ Matrix &operator ^=(const Matrix &_mat){
     }
     return (*this);
 }
-Matrix &operator ^(const Matrix &_mat){
+Matrix operator ^(const Matrix &_mat){
     return (*this)^=_mat;
 }
 // AND
@@ -29,7 +29,7 @@ Matrix &operator &=(const Matrix &_mat){
     mat=ret;
     return (*this);
 }
-Matrix &operator &(const Matrix &_mat){
+Matrix operator &(const Matrix &_mat){
     return (*this)&=_mat;
 }
 // AND累乗
