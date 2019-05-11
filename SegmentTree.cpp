@@ -129,3 +129,24 @@ int main(){
 //     printf("%.10f\n",ansmax);
 //     return 0;
 // }
+// https://atcoder.jp/contests/abc125/tasks/abc125_c
+// long long gcd(long long x,long long y){
+//     return y>0?gcd(y,x%y):x;
+// }
+//
+// int main(){
+//     int n; cin>>n;
+//     SegmentTree<int> seg(n,0,gcd);
+//     for(int i=0;i<n;i++){
+//         int a; cin>>a;
+//         seg.replace(i,a);
+//     }
+//     int ans=0;
+//     for(int i=0;i<n;i++){
+//         int l=i>0?seg.get(0,i):0;
+//         int r=i<n-1?seg.get(i+1,n):0;
+//         ans=max(ans,(int)gcd(l,r));
+//     }
+//     cout<<ans<<endl;
+//     return 0;
+// }

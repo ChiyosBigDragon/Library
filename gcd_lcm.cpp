@@ -5,9 +5,7 @@ using namespace std;
 inline long long mod(long long n,long long m){return(n%m+m)%m;}
 
 long long gcd(long long x,long long y){
-    //Euclidの互除法
-    if(!(x%y)) return y;
-    return gcd(y,x%y);
+    return y>0?gcd(y,x%y):x;
 }
 long long lcm(long long x,long long y){
     return x/gcd(x,y)*y;

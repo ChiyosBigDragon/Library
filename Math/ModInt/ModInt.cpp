@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-using int64 = int_fast64_t;
-template<int64 MOD>
+using fint64 = int_fast64_t;
+template<fint64 MOD>
 struct ModInt{
-    int64 x;
+    fint64 x;
     ModInt():x(0){}
-    ModInt(int64 x):
+    ModInt(fint64 x):
         x(x>=0?x%MOD:(MOD-(-x)%MOD)%MOD)
         {}
     // 負号
@@ -56,8 +56,8 @@ struct ModInt{
         return x!=rhs.x;
     }
     // 累乗
-    ModInt pow(int64 n){
-        int64 tmp=x;
+    ModInt pow(fint64 n){
+        fint64 tmp=x;
         x=1;
         while(n>0){
             if(n&1) x=x*tmp%MOD;
@@ -68,11 +68,11 @@ struct ModInt{
     }
     // 逆元
     ModInt inverse(){
-        int64 a=x,b=MOD,s=1,t=0;
+        fint64 a=x,b=MOD,s=1,t=0;
         while(b>0){
-            int64 u=b/a;
-            b-=u*a;
-            t-=u*s;
+            fint64 u=a/b;
+            a-=u*b;
+            s-=u*t;
             swap(a,b);
             swap(s,t);
         }
@@ -80,7 +80,7 @@ struct ModInt{
     }
     // 入出力
     friend istream &operator >>(istream &lhs,ModInt<MOD> &rhs){
-        int64 x; lhs>>x;
+        fint64 x; lhs>>x;
         rhs=ModInt<MOD>(x);
         return lhs;
     }
