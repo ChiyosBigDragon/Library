@@ -56,18 +56,18 @@ struct ModInt{
         return x!=rhs.x;
     }
     // 累乗
-    ModInt pow(fint64 n){
+    ModInt pow(fint64 n) const{
         fint64 tmp=x;
-        x=1;
+        fint64 ret=1;
         while(n>0){
-            if(n&1) x=x*tmp%MOD;
+            if(n&1) ret=ret*tmp%MOD;
             tmp=tmp*tmp%MOD;
             n>>=1ll;
         }
-        return (*this);
+        return ModInt(ret);
     }
     // 逆元
-    ModInt inverse(){
+    ModInt inverse() const{
         fint64 a=x,b=MOD,s=1,t=0;
         while(b>0){
             fint64 u=a/b;

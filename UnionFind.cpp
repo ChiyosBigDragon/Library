@@ -1,3 +1,6 @@
+// root取るときはちゃんとroot()してください．
+// par[]で取得できるのは圧縮済のときのみです
+
 #include <bits/stdc++.h>
 #define rep(i,n) for(int i=0;i<n;i++)
 #define all(x) (x).begin(),(x).end()
