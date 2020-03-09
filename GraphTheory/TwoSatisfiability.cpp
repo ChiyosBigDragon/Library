@@ -3,14 +3,13 @@ using namespace std;
 
 #include "./StronglyConnectedComponents.cpp"
 
+// BEGIN CUT HERE
 struct TwoSatisfiability {
 	const int V;
+	// pos[x] := xの真理値
 	vector<bool> pos;
 	StronglyConnectedComponents scc;
 	TwoSatisfiability(const int V) : V(V), pos(vector<bool>(2 * V)), scc(StronglyConnectedComponents(2 * V)) {}
-	constexpr int NOT(const int A) const {
-		return (A + V) % (2 * V);
-	}
 	// A -> B <=> not B -> not A
 	inline void addIF(int A, const bool Apos, int B, const bool Bpos) {
 		if(not Apos) A = NOT(A);
@@ -24,7 +23,7 @@ struct TwoSatisfiability {
 	}
 	// A or B <=> not A -> B
 	void addOR(const int A, const bool Apos, const int B, const bool Bpos) {
-		addIF(A, not Apos, B, not Bpos); // not A -> B
+		addIF(A, not Apos, B, Bpos); // not A -> B
 	}
 	// not(A and B) => A -> not B
 	void addNAND(const int A, const bool Apos, const int B, const bool Bpos) {
@@ -36,7 +35,7 @@ struct TwoSatisfiability {
 		addNAND(A, not Apos, B, not Bpos); // not(not A and not B)
 	}
 	// not(A xor B) <=> A xor not B
-	void addXNOR(int A, bool Apos, int B, bool Bpos) {
+	void addXNOR(const int A, const bool Apos, const int B, const bool Bpos) {
 		addXOR(A, Apos, B, not Bpos); // A xor not B
 	}
 	bool solve() {
@@ -52,4 +51,9 @@ struct TwoSatisfiability {
 	bool get(int x) {
 		return pos[x];
 	}
+	private:
+	constexpr int NOT(const int A) const {
+		return (A + V) % (2 * V);
+	}
 };
+// END CUT HERE
