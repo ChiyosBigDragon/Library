@@ -6,7 +6,7 @@ using namespace std;
 // BEGIN CUT HERE
 struct TwoSatisfiability {
 	const int V;
-	// pos[x] := xの真理値
+	// pos[x] := xの真偽値
 	vector<bool> pos;
 	StronglyConnectedComponents scc;
 	TwoSatisfiability(const int V) : V(V), pos(vector<bool>(2 * V)), scc(StronglyConnectedComponents(2 * V)) {}
