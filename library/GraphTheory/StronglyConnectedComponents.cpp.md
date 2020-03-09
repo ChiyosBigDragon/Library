@@ -38,12 +38,13 @@ layout: default
 
 ## Required by
 
-* :warning: <a href="TwoSatisfiability.cpp.html">GraphTheory/TwoSatisfiability.cpp</a>
+* :heavy_check_mark: <a href="TwoSatisfiability.cpp.html">GraphTheory/TwoSatisfiability.cpp</a>
 
 
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/yosupo/StronglyConnectedComponents.test.cpp.html">test/yosupo/StronglyConnectedComponents.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/yosupo/TwoSatisfiability.test.cpp.html">test/yosupo/TwoSatisfiability.test.cpp</a>
 
 
 ## Code

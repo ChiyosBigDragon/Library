@@ -46,7 +46,7 @@ layout: default
 ### GraphTheory
 
 * :heavy_check_mark: <a href="library/GraphTheory/StronglyConnectedComponents.cpp.html">GraphTheory/StronglyConnectedComponents.cpp</a>
-* :warning: <a href="library/GraphTheory/TwoSatisfiability.cpp.html">GraphTheory/TwoSatisfiability.cpp</a>
+* :heavy_check_mark: <a href="library/GraphTheory/TwoSatisfiability.cpp.html">GraphTheory/TwoSatisfiability.cpp</a>
 
 
 <div id="fa816edb83e95bf0c8da580bdfd491ef"></div>
@@ -60,6 +60,7 @@ layout: default
 * :warning: <a href="library/tmp/DP.cpp.html">tmp/DP.cpp</a>
 * :warning: <a href="library/tmp/Dijkstra(Route).cpp.html">tmp/Dijkstra(Route).cpp</a>
 * :warning: <a href="library/tmp/Dijkstra.cpp.html">tmp/Dijkstra.cpp</a>
+* :warning: <a href="library/tmp/Dinic.cpp.html">tmp/Dinic.cpp</a>
 * :warning: <a href="library/tmp/LIS.cpp.html">tmp/LIS.cpp</a>
 * :warning: <a href="library/tmp/LevenshteinDistance.cpp.html">tmp/LevenshteinDistance.cpp</a>
 * :warning: <a href="library/tmp/MST.cpp.html">tmp/MST.cpp</a>
@@ -163,6 +164,7 @@ layout: default
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/test/yosupo/StronglyConnectedComponents.test.cpp.html">test/yosupo/StronglyConnectedComponents.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/yosupo/TwoSatisfiability.test.cpp.html">test/yosupo/TwoSatisfiability.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/yosupo/UnionFind.test.cpp.html">test/yosupo/UnionFind.test.cpp</a>
 
 
