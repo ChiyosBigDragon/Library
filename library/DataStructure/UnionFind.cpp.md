@@ -21,19 +21,24 @@ layout: default
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-balloon-js@1.1.2/jquery.balloon.min.js" integrity="sha256-ZEYs9VrgAeNuPvs15E39OsyOJaIkXEEt10fzxJ20+2I=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../assets/js/copy-button.js"></script>
-<link rel="stylesheet" href="../../../assets/css/copy-button.css" />
+<script type="text/javascript" src="../../assets/js/copy-button.js"></script>
+<link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: tmp/DataStructure/UnionFInd.cpp
+# :heavy_check_mark: DataStructure/UnionFind.cpp
 
-<a href="../../../index.html">Back to top page</a>
+<a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../../index.html#29bec2f06c1d890b0840e1fb0404cd21">tmp/DataStructure</a>
-* <a href="{{ site.github.repository_url }}/blob/master/tmp/DataStructure/UnionFInd.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-09 19:28:31+09:00
+* category: <a href="../../index.html#5e248f107086635fddcead5bf28943fc">DataStructure</a>
+* <a href="{{ site.github.repository_url }}/blob/master/DataStructure/UnionFind.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-09 20:27:18+09:00
 
 
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/test/yosupo/UnionFind.test.cpp.html">test/yosupo/UnionFind.test.cpp</a>
 
 
 ## Code
@@ -56,7 +61,7 @@ struct UnionFind {
 		iota(par.begin(), par.end(), 0);
 	}
 	// xとyを結合
-	constexpr bool unite(uint x, uint y) {
+	bool unite(uint x, uint y) {
 		x = root(x);
 		y = root(y);
 		if(same(x, y)) {
@@ -70,18 +75,18 @@ struct UnionFind {
 		return true;
 	}
 	// xの集合ID
-	constexpr uint root(const uint x) {
+	uint root(const uint x) {
 		if(par[x] == x) {
 			return x;
 		}
 		return (par[x] = root(par[x]));
 	}
 	// xとyが同じ集合か
-	constexpr bool same(const uint x, const uint y) {
+	bool same(const uint x, const uint y) {
 		return (root(x) == root(y));
 	}
 	// xが属する集合のサイズ
-	constexpr uint size(const uint x) {
+	uint size(const uint x) {
 		return sz[root(x)];
 	}
 };
@@ -92,7 +97,7 @@ struct UnionFind {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "tmp/DataStructure/UnionFInd.cpp"
+#line 1 "DataStructure/UnionFind.cpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -108,7 +113,7 @@ struct UnionFind {
 		iota(par.begin(), par.end(), 0);
 	}
 	// xとyを結合
-	constexpr bool unite(uint x, uint y) {
+	bool unite(uint x, uint y) {
 		x = root(x);
 		y = root(y);
 		if(same(x, y)) {
@@ -122,18 +127,18 @@ struct UnionFind {
 		return true;
 	}
 	// xの集合ID
-	constexpr uint root(const uint x) {
+	uint root(const uint x) {
 		if(par[x] == x) {
 			return x;
 		}
 		return (par[x] = root(par[x]));
 	}
 	// xとyが同じ集合か
-	constexpr bool same(const uint x, const uint y) {
+	bool same(const uint x, const uint y) {
 		return (root(x) == root(y));
 	}
 	// xが属する集合のサイズ
-	constexpr uint size(const uint x) {
+	uint size(const uint x) {
 		return sz[root(x)];
 	}
 };
@@ -142,5 +147,5 @@ struct UnionFind {
 ```
 {% endraw %}
 
-<a href="../../../index.html">Back to top page</a>
+<a href="../../index.html">Back to top page</a>
 

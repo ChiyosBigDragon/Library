@@ -38,7 +38,15 @@ layout: default
 
 ### DataStructure
 
-* :heavy_check_mark: <a href="library/DataStructure/UnionFInd.cpp.html">DataStructure/UnionFInd.cpp</a>
+* :heavy_check_mark: <a href="library/DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
+
+
+<div id="f381732df2a59e8e35d7811ba3c2868c"></div>
+
+### GraphTheory
+
+* :heavy_check_mark: <a href="library/GraphTheory/StronglyConnectedComponents.cpp.html">GraphTheory/StronglyConnectedComponents.cpp</a>
+* :warning: <a href="library/GraphTheory/TwoSatisfiability.cpp.html">GraphTheory/TwoSatisfiability.cpp</a>
 
 
 <div id="fa816edb83e95bf0c8da580bdfd491ef"></div>
@@ -75,13 +83,6 @@ layout: default
 * :warning: <a href="library/tmp/prime_factorization.cpp.html">tmp/prime_factorization.cpp</a>
 * :warning: <a href="library/tmp/topological_sort.cpp.html">tmp/topological_sort.cpp</a>
 * :warning: <a href="library/tmp/枕決め.cpp.html">tmp/枕決め.cpp</a>
-
-
-<div id="29bec2f06c1d890b0840e1fb0404cd21"></div>
-
-### tmp/DataStructure
-
-* :warning: <a href="library/tmp/DataStructure/UnionFInd.cpp.html">tmp/DataStructure/UnionFInd.cpp</a>
 
 
 <div id="d7c3d82c29e0fe8197a46b07109ed067"></div>
@@ -161,6 +162,7 @@ layout: default
 
 ## Verify Files
 
+* :heavy_check_mark: <a href="verify/test/yosupo/StronglyConnectedComponents.test.cpp.html">test/yosupo/StronglyConnectedComponents.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/yosupo/UnionFind.test.cpp.html">test/yosupo/UnionFind.test.cpp</a>
 
 

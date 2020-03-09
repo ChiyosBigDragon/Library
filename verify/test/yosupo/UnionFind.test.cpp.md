@@ -30,7 +30,7 @@ layout: default
 <a href="../../../index.html">Back to top page</a>
 
 * <a href="{{ site.github.repository_url }}/blob/master/test/yosupo/UnionFind.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-09 20:22:36+09:00
+    - Last commit date: 2020-03-09 20:27:18+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/unionfind">https://judge.yosupo.jp/problem/unionfind</a>
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/DataStructure/UnionFInd.cpp.html">DataStructure/UnionFInd.cpp</a>
+* :heavy_check_mark: <a href="../../../library/DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
 
 
 ## Code
@@ -50,7 +50,7 @@ layout: default
 #include<bits/stdc++.h>
 using namespace std;
 
-#include "../../DataStructure/UnionFInd.cpp"
+#include "../../DataStructure/UnionFind.cpp"
 
 int main() {
 	int n; cin >> n;
@@ -79,7 +79,7 @@ int main() {
 #include<bits/stdc++.h>
 using namespace std;
 
-#line 1 "test/yosupo/../../DataStructure/UnionFInd.cpp"
+#line 1 "test/yosupo/../../DataStructure/UnionFind.cpp"
 #include <bits/stdc++.h>
 using namespace std;
 
