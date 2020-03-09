@@ -13,7 +13,7 @@ struct UnionFind {
 		iota(par.begin(), par.end(), 0);
 	}
 	// xとyを結合
-	constexpr bool unite(uint x, uint y) {
+	bool unite(uint x, uint y) {
 		x = root(x);
 		y = root(y);
 		if(same(x, y)) {
@@ -27,18 +27,18 @@ struct UnionFind {
 		return true;
 	}
 	// xの集合ID
-	constexpr uint root(const uint x) {
+	uint root(const uint x) {
 		if(par[x] == x) {
 			return x;
 		}
 		return (par[x] = root(par[x]));
 	}
 	// xとyが同じ集合か
-	constexpr bool same(const uint x, const uint y) {
+	bool same(const uint x, const uint y) {
 		return (root(x) == root(y));
 	}
 	// xが属する集合のサイズ
-	constexpr uint size(const uint x) {
+	uint size(const uint x) {
 		return sz[root(x)];
 	}
 };

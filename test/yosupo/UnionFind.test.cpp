@@ -2,9 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define call_from_test
-#include "../../DataStructure/UnionFind.cpp"
-#undef call_from_test
+#include "../../DataStructure/UnionFInd.cpp"
 
 int main() {
 	int n; cin >> n;
