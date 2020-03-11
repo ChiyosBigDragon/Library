@@ -45,7 +45,7 @@ layout: default
 
 ### Geometry
 
-* :warning: <a href="library/Geometry/template.cpp.html">Geometry/template.cpp</a>
+* :question: <a href="library/Geometry/template.cpp.html">Geometry/template.cpp</a>
 
 
 <div id="f381732df2a59e8e35d7811ba3c2868c"></div>
@@ -55,19 +55,6 @@ layout: default
 * :heavy_check_mark: <a href="library/GraphTheory/LowestCommonAncestor.cpp.html">GraphTheory/LowestCommonAncestor.cpp</a>
 * :heavy_check_mark: <a href="library/GraphTheory/StronglyConnectedComponents.cpp.html">GraphTheory/StronglyConnectedComponents.cpp</a>
 * :heavy_check_mark: <a href="library/GraphTheory/TwoSatisfiability.cpp.html">GraphTheory/TwoSatisfiability.cpp</a>
-
-
-<div id="0d0c91c0cca30af9c1c9faef0cf04aa9"></div>
-
-### test/aoj
-
-* :warning: <a href="library/test/aoj/CGL_1_A .cpp.html">test/aoj/CGL_1_A .cpp</a>
-* :warning: <a href="library/test/aoj/CGL_1_B.cpp.html">test/aoj/CGL_1_B.cpp</a>
-* :warning: <a href="library/test/aoj/CGL_1_C.cpp.html">test/aoj/CGL_1_C.cpp</a>
-* :warning: <a href="library/test/aoj/CGL_2_A.cpp.html">test/aoj/CGL_2_A.cpp</a>
-* :warning: <a href="library/test/aoj/CGL_2_B.cpp.html">test/aoj/CGL_2_B.cpp</a>
-* :warning: <a href="library/test/aoj/CGL_2_C.cpp.html">test/aoj/CGL_2_C.cpp</a>
-* :warning: <a href="library/test/aoj/CGL_2_D.cpp.html">test/aoj/CGL_2_D.cpp</a>
 
 
 <div id="fa816edb83e95bf0c8da580bdfd491ef"></div>
@@ -184,6 +171,13 @@ layout: default
 
 ## Verify Files
 
+* :x: <a href="verify/test/aoj/CGL_1_A.test.cpp.html">test/aoj/CGL_1_A.test.cpp</a>
+* :x: <a href="verify/test/aoj/CGL_1_B.test.cpp.html">test/aoj/CGL_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_C.test.cpp.html">test/aoj/CGL_1_C.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/CGL_2_A.test.cpp.html">test/aoj/CGL_2_A.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/CGL_2_B.test.cpp.html">test/aoj/CGL_2_B.test.cpp</a>
+* :x: <a href="verify/test/aoj/CGL_2_C.test.cpp.html">test/aoj/CGL_2_C.test.cpp</a>
+* :x: <a href="verify/test/aoj/CGL_2_D.test.cpp.html">test/aoj/CGL_2_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/yosupo/LowestCommonAncestor.test.cpp.html">test/yosupo/LowestCommonAncestor.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/yosupo/StronglyConnectedComponents.test.cpp.html">test/yosupo/StronglyConnectedComponents.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/yosupo/TwoSatisfiability.test.cpp.html">test/yosupo/TwoSatisfiability.test.cpp</a>

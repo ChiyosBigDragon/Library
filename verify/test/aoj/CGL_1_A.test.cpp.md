@@ -25,21 +25,21 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :warning: test/aoj/CGL_1_B.cpp
+# :x: test/aoj/CGL_1_A.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_1_B.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-11 17:19:24+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_1_A.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-11 17:49:13+09:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_1_B">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_1_B</a>
+* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_1_A">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_1_A</a>
 
 
 ## Depends on
 
-* :warning: <a href="../../Geometry/template.cpp.html">Geometry/template.cpp</a>
+* :question: <a href="../../../library/Geometry/template.cpp.html">Geometry/template.cpp</a>
 
 
 ## Code
@@ -47,7 +47,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_1_B"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_1_A"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -56,11 +56,10 @@ using namespace std;
 using namespace geometry;
 int main() {
 	Point p1, p2; cin >> p1 >> p2;
-	Line l(p1, p2);
 	int q; cin >> q;
 	while(q--) {
 		Point p; cin >> p;
-		cout << reflection(l, p) << '\n';
+		cout << projection(p - p1, p2 - p1) + p1 << '\n';
 	}
 	return 0;
 }
@@ -70,8 +69,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/aoj/CGL_1_B.cpp"
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_1_B"
+#line 1 "test/aoj/CGL_1_A.test.cpp"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_1_A"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -241,16 +240,15 @@ namespace geometry {
 	}
 }
 // END CUT HERE
-#line 6 "test/aoj/CGL_1_B.cpp"
+#line 6 "test/aoj/CGL_1_A.test.cpp"
 
 using namespace geometry;
 int main() {
 	Point p1, p2; cin >> p1 >> p2;
-	Line l(p1, p2);
 	int q; cin >> q;
 	while(q--) {
 		Point p; cin >> p;
-		cout << reflection(l, p) << '\n';
+		cout << projection(p - p1, p2 - p1) + p1 << '\n';
 	}
 	return 0;
 }

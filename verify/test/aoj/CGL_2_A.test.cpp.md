@@ -25,21 +25,21 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :warning: test/aoj/CGL_2_B.cpp
+# :heavy_check_mark: test/aoj/CGL_2_A.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_2_B.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-11 17:19:24+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_2_A.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-11 17:49:13+09:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_B">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_B</a>
+* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_A">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_A</a>
 
 
 ## Depends on
 
-* :warning: <a href="../../Geometry/template.cpp.html">Geometry/template.cpp</a>
+* :question: <a href="../../../library/Geometry/template.cpp.html">Geometry/template.cpp</a>
 
 
 ## Code
@@ -47,7 +47,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_B"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_A"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -59,21 +59,23 @@ int main() {
 	while(q--) {
 		Point p[4];
 		for(int i = 0; i < 4; ++i) cin >> p[i];
-		Segment s1(p[0], p[1]);
-		Segment s2(p[2], p[3]);
-		cout << intersect(s1, s2) << '\n';
+		Line s1(p[0], p[1]);
+		Line s2(p[2], p[3]);
+		int ans = 0;
+		if(parallel(s1, s2)) ans = 2;
+		if(orthogonal(s1, s2)) ans = 1;
+		cout << ans << '\n';
 	}
 	return 0;
 }
-
 ```
 {% endraw %}
 
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/aoj/CGL_2_B.cpp"
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_B"
+#line 1 "test/aoj/CGL_2_A.test.cpp"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_A"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -243,7 +245,7 @@ namespace geometry {
 	}
 }
 // END CUT HERE
-#line 6 "test/aoj/CGL_2_B.cpp"
+#line 6 "test/aoj/CGL_2_A.test.cpp"
 
 using namespace geometry;
 int main() {
@@ -251,9 +253,12 @@ int main() {
 	while(q--) {
 		Point p[4];
 		for(int i = 0; i < 4; ++i) cin >> p[i];
-		Segment s1(p[0], p[1]);
-		Segment s2(p[2], p[3]);
-		cout << intersect(s1, s2) << '\n';
+		Line s1(p[0], p[1]);
+		Line s2(p[2], p[3]);
+		int ans = 0;
+		if(parallel(s1, s2)) ans = 2;
+		if(orthogonal(s1, s2)) ans = 1;
+		cout << ans << '\n';
 	}
 	return 0;
 }
