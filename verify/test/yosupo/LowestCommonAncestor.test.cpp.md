@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :x: test/yosupo/LowestCommonAncestor.test.cpp
+# :heavy_check_mark: test/yosupo/LowestCommonAncestor.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
 * category: <a href="../../../index.html#0b58406058f6619a0f31a172defc0230">test/yosupo</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/yosupo/LowestCommonAncestor.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-10 14:31:49+09:00
+    - Last commit date: 2020-03-11 17:25:56+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/lca">https://judge.yosupo.jp/problem/lca</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../../library/GraphTheory/LowestCommonAncestor.cpp.html">GraphTheory/LowestCommonAncestor.cpp</a>
+* :heavy_check_mark: <a href="../../../library/GraphTheory/LowestCommonAncestor.cpp.html">GraphTheory/LowestCommonAncestor.cpp</a>
 
 
 ## Code
@@ -60,6 +60,7 @@ int main() {
 		int p; cin >> p;
 		lca.addEdge(i, p);
 	}
+	lca.build();
 	while(q--) {
 		int u, v; cin >> u >> v;
 		cout << lca.get(u, v) << '\n';
@@ -148,6 +149,7 @@ int main() {
 		int p; cin >> p;
 		lca.addEdge(i, p);
 	}
+	lca.build();
 	while(q--) {
 		int u, v; cin >> u >> v;
 		cout << lca.get(u, v) << '\n';
