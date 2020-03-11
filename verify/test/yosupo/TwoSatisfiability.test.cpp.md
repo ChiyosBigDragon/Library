@@ -29,6 +29,7 @@ layout: default
 
 <a href="../../../index.html">Back to top page</a>
 
+* category: <a href="../../../index.html#0b58406058f6619a0f31a172defc0230">test/yosupo</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/yosupo/TwoSatisfiability.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-03-09 22:24:18+09:00
 
@@ -89,12 +90,10 @@ int main() {
 #include<bits/stdc++.h>
 using namespace std;
 
-#line 1 "test/yosupo/../../GraphTheory/TwoSatisfiability.cpp"
-#include <bits/stdc++.h>
+#line 2 "test/yosupo/../../GraphTheory/TwoSatisfiability.cpp"
 using namespace std;
 
-#line 1 "test/yosupo/../../GraphTheory/StronglyConnectedComponents.cpp"
-#include <bits/stdc++.h>
+#line 2 "test/yosupo/../../GraphTheory/StronglyConnectedComponents.cpp"
 using namespace std;
 
 // BEGIN CUT HERE

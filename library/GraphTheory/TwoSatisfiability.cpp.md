@@ -120,8 +120,7 @@ struct TwoSatisfiability {
 #include <bits/stdc++.h>
 using namespace std;
 
-#line 1 "GraphTheory/StronglyConnectedComponents.cpp"
-#include <bits/stdc++.h>
+#line 2 "GraphTheory/StronglyConnectedComponents.cpp"
 using namespace std;
 
 // BEGIN CUT HERE

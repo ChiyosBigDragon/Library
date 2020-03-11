@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#5e248f107086635fddcead5bf28943fc">DataStructure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/DataStructure/UnionFind.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-09 20:27:18+09:00
+    - Last commit date: 2020-03-10 14:39:46+09:00
 
 
 
@@ -51,17 +51,16 @@ using namespace std;
 
 // BEGIN CUT HERE
 struct UnionFind {
-	using uint = uint_fast32_t;
-	const uint V;
+	const int V;
 	// par[x] := xのroot
-	vector<uint> par;
+	vector<int> par;
 	// sz[x] := xを含む集合のサイズ
-	vector<uint> sz;
-	UnionFind(const uint V) : V(V), par(vector<uint>(V)), sz(vector<uint>(V, 1)) {
+	vector<int> sz;
+	UnionFind(const int V) : V(V), par(vector<int>(V)), sz(vector<int>(V, 1)) {
 		iota(par.begin(), par.end(), 0);
 	}
 	// xとyを結合
-	bool unite(uint x, uint y) {
+	bool unite(int x, int y) {
 		x = root(x);
 		y = root(y);
 		if(same(x, y)) {
@@ -75,18 +74,18 @@ struct UnionFind {
 		return true;
 	}
 	// xの集合ID
-	uint root(const uint x) {
+	int root(const int x) {
 		if(par[x] == x) {
 			return x;
 		}
 		return (par[x] = root(par[x]));
 	}
 	// xとyが同じ集合か
-	bool same(const uint x, const uint y) {
+	bool same(const int x, const int y) {
 		return (root(x) == root(y));
 	}
 	// xが属する集合のサイズ
-	uint size(const uint x) {
+	int size(const int x) {
 		return sz[root(x)];
 	}
 };
@@ -103,17 +102,16 @@ using namespace std;
 
 // BEGIN CUT HERE
 struct UnionFind {
-	using uint = uint_fast32_t;
-	const uint V;
+	const int V;
 	// par[x] := xのroot
-	vector<uint> par;
+	vector<int> par;
 	// sz[x] := xを含む集合のサイズ
-	vector<uint> sz;
-	UnionFind(const uint V) : V(V), par(vector<uint>(V)), sz(vector<uint>(V, 1)) {
+	vector<int> sz;
+	UnionFind(const int V) : V(V), par(vector<int>(V)), sz(vector<int>(V, 1)) {
 		iota(par.begin(), par.end(), 0);
 	}
 	// xとyを結合
-	bool unite(uint x, uint y) {
+	bool unite(int x, int y) {
 		x = root(x);
 		y = root(y);
 		if(same(x, y)) {
@@ -127,18 +125,18 @@ struct UnionFind {
 		return true;
 	}
 	// xの集合ID
-	uint root(const uint x) {
+	int root(const int x) {
 		if(par[x] == x) {
 			return x;
 		}
 		return (par[x] = root(par[x]));
 	}
 	// xとyが同じ集合か
-	bool same(const uint x, const uint y) {
+	bool same(const int x, const int y) {
 		return (root(x) == root(y));
 	}
 	// xが属する集合のサイズ
-	uint size(const uint x) {
+	int size(const int x) {
 		return sz[root(x)];
 	}
 };
