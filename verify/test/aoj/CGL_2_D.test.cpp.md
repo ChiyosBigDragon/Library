@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :x: test/aoj/CGL_2_D.test.cpp
+# :heavy_check_mark: test/aoj/CGL_2_D.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_2_D.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-11 17:49:13+09:00
+    - Last commit date: 2020-03-11 17:59:18+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_D">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_D</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="../../../library/Geometry/template.cpp.html">Geometry/template.cpp</a>
+* :heavy_check_mark: <a href="../../../library/Geometry/template.cpp.html">Geometry/template.cpp</a>
 
 
 ## Code
@@ -48,6 +48,7 @@ layout: default
 {% raw %}
 ```cpp
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_D"
+#define ERROR "1e-8"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -74,6 +75,7 @@ int main() {
 ```cpp
 #line 1 "test/aoj/CGL_2_D.test.cpp"
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_D"
+#define ERROR "1e-8"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -243,7 +245,7 @@ namespace geometry {
 	}
 }
 // END CUT HERE
-#line 6 "test/aoj/CGL_2_D.test.cpp"
+#line 7 "test/aoj/CGL_2_D.test.cpp"
 
 using namespace geometry;
 int main() {

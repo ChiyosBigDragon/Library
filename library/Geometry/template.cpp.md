@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :question: Geometry/template.cpp
+# :heavy_check_mark: Geometry/template.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,13 +38,13 @@ layout: default
 
 ## Verified with
 
-* :x: <a href="../../verify/test/aoj/CGL_1_A.test.cpp.html">test/aoj/CGL_1_A.test.cpp</a>
-* :x: <a href="../../verify/test/aoj/CGL_1_B.test.cpp.html">test/aoj/CGL_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/CGL_1_A.test.cpp.html">test/aoj/CGL_1_A.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/CGL_1_B.test.cpp.html">test/aoj/CGL_1_B.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/CGL_1_C.test.cpp.html">test/aoj/CGL_1_C.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/CGL_2_A.test.cpp.html">test/aoj/CGL_2_A.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/aoj/CGL_2_B.test.cpp.html">test/aoj/CGL_2_B.test.cpp</a>
-* :x: <a href="../../verify/test/aoj/CGL_2_C.test.cpp.html">test/aoj/CGL_2_C.test.cpp</a>
-* :x: <a href="../../verify/test/aoj/CGL_2_D.test.cpp.html">test/aoj/CGL_2_D.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/CGL_2_C.test.cpp.html">test/aoj/CGL_2_C.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/aoj/CGL_2_D.test.cpp.html">test/aoj/CGL_2_D.test.cpp</a>
 
 
 ## Code
