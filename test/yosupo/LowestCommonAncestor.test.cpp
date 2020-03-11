@@ -11,6 +11,7 @@ int main() {
 		int p; cin >> p;
 		lca.addEdge(i, p);
 	}
+	lca.build();
 	while(q--) {
 		int u, v; cin >> u >> v;
 		cout << lca.get(u, v) << '\n';
