@@ -12,7 +12,7 @@ int main() {
 	int q; cin >> q;
 	while(q--) {
 		Point p; cin >> p;
-		cout << reflection(l, p) << '\n';
+		cout << reflection(p, l) << '\n';
 	}
 	return 0;
 }
