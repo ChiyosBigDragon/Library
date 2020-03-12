@@ -25,16 +25,16 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/aoj/CGL_2_C.test.cpp
+# :heavy_check_mark: test/aoj/CGL_3_A.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_2_C.test.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_3_A.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-03-11 19:59:08+09:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_C">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_C</a>
+* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_3_A">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_3_A</a>
 
 
 ## Depends on
@@ -47,8 +47,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_C"
-#define ERROR "1e-8"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_3_A"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -56,26 +55,20 @@ using namespace std;
 
 using namespace geometry;
 int main() {
-	int q; cin >> q;
-	while(q--) {
-		Point p[4];
-		for(int i = 0; i < 4; ++i) cin >> p[i];
-		Segment s1(p[0], p[1]);
-		Segment s2(p[2], p[3]);
-		cout << crossPoint(s1, s2) << '\n';
-	}
+	int n; cin >> n;
+	vector<Point> p(n);
+	for(int i = 0; i < n; ++i) cin >> p[i];
+	cout << fixed << setprecision(1) << area(p) << '\n';
 	return 0;
 }
-
 ```
 {% endraw %}
 
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/aoj/CGL_2_C.test.cpp"
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_C"
-#define ERROR "1e-8"
+#line 1 "test/aoj/CGL_3_A.test.cpp"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_3_A"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -268,18 +261,14 @@ namespace geometry {
 	}
 }
 // END CUT HERE
-#line 7 "test/aoj/CGL_2_C.test.cpp"
+#line 6 "test/aoj/CGL_3_A.test.cpp"
 
 using namespace geometry;
 int main() {
-	int q; cin >> q;
-	while(q--) {
-		Point p[4];
-		for(int i = 0; i < 4; ++i) cin >> p[i];
-		Segment s1(p[0], p[1]);
-		Segment s2(p[2], p[3]);
-		cout << crossPoint(s1, s2) << '\n';
-	}
+	int n; cin >> n;
+	vector<Point> p(n);
+	for(int i = 0; i < n; ++i) cin >> p[i];
+	cout << fixed << setprecision(1) << area(p) << '\n';
 	return 0;
 }
 

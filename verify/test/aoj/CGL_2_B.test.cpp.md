@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_2_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-11 17:49:13+09:00
+    - Last commit date: 2020-03-11 19:59:08+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_B">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_B</a>
@@ -136,7 +136,7 @@ namespace geometry {
 	// 同一直線上(a -> c -> b)
 	static constexpr int CCW_ON_SEGMENT = 0b10000;
 	// 3点の位置関係
-	int ccw(const Point &a, Point b, Point c) {
+	inline int ccw(const Point &a, Point b, Point c) {
 		b = b - a, c = c - a;
 		if(cross(b, c) > EPS) return CCW_COUNTER_CLOCKWISE;
 		if(cross(b, c) < -EPS) return CCW_CLOCKWISE;
@@ -231,6 +231,29 @@ namespace geometry {
 		ret = min(ret, distance(s2.a, s1));
 		ret = min(ret, distance(s2.b, s1));
 		return ret;
+	}
+	// 面積
+	inline Real area(const vector<Point>& p) {
+		int n = p.size();
+		Real ret = 0;
+		for(int i = 1; i <= n; ++i) {
+			ret += cross(p[i - 1], p[i % n]);
+		}
+		return abs(ret / 2);
+	}
+	// 凸性判定（if rev false : 反時計回り）
+	inline bool convexity(const vector<Point>& p, const bool rev = false) {
+		int n = p.size();
+		int ret = 0;
+		for(int i = 1; i <= n; ++i) {
+			ret |= ccw(p[(i - 1) % n], p[i % n], p[(i + 1) % n]);
+		}
+		if(rev) {
+			ret &= CCW_COUNTER_CLOCKWISE; 
+		} else {
+			ret &= CCW_CLOCKWISE;
+		}
+		return ret == 0;
 	}
 	inline istream& operator>>(istream& is, Point& p) {
 		Real x, y;

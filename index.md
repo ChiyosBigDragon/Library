@@ -178,6 +178,8 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj/CGL_2_B.test.cpp.html">test/aoj/CGL_2_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/CGL_2_C.test.cpp.html">test/aoj/CGL_2_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj/CGL_2_D.test.cpp.html">test/aoj/CGL_2_D.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/CGL_3_A.test.cpp.html">test/aoj/CGL_3_A.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/aoj/CGL_3_B.test.cpp.html">test/aoj/CGL_3_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/yosupo/LowestCommonAncestor.test.cpp.html">test/yosupo/LowestCommonAncestor.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/yosupo/StronglyConnectedComponents.test.cpp.html">test/yosupo/StronglyConnectedComponents.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/yosupo/TwoSatisfiability.test.cpp.html">test/yosupo/TwoSatisfiability.test.cpp</a>
