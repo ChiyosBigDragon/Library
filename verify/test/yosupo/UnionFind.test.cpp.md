@@ -80,7 +80,7 @@ int main() {
 #include<bits/stdc++.h>
 using namespace std;
 
-#line 2 "test/yosupo/../../DataStructure/UnionFind.cpp"
+#line 2 "DataStructure/UnionFind.cpp"
 using namespace std;
 
 // BEGIN CUT HERE

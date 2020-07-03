@@ -89,7 +89,7 @@ int main() {
 #include<bits/stdc++.h>
 using namespace std;
 
-#line 2 "test/yosupo/../../GraphTheory/StronglyConnectedComponents.cpp"
+#line 2 "GraphTheory/StronglyConnectedComponents.cpp"
 using namespace std;
 
 // BEGIN CUT HERE

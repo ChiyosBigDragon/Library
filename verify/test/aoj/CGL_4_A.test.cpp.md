@@ -25,16 +25,16 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/aoj/CGL_3_B.test.cpp
+# :heavy_check_mark: test/aoj/CGL_4_A.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_3_B.test.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_4_A.test.cpp">View this file on GitHub</a>
     - Last commit date: 2020-07-03 22:28:13+09:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_3_B">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_3_B</a>
+* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_4_A">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_4_A</a>
 
 
 ## Depends on
@@ -47,7 +47,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_3_B"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_4_A"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -57,18 +57,25 @@ using namespace geometry;
 int main() {
 	int n; cin >> n;
 	vector<Point> p(n);
-	for(int i = 0; i < n; ++i) cin >> p[i];
-	cout << convexity(p) << '\n';
+	for(int i = 0; i < n; ++i) {
+		cin >> p[i];
+	}
+	vector<Point> ch = convexHull(p);
+	cout << ch.size() << '\n';
+	for(Point& e : ch) {
+		cout << (int)e.real() << " " << (int)e.imag() << '\n';
+	}
 	return 0;
 }
+
 ```
 {% endraw %}
 
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/aoj/CGL_3_B.test.cpp"
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_3_B"
+#line 1 "test/aoj/CGL_4_A.test.cpp"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_4_A"
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -283,14 +290,20 @@ namespace geometry {
 	}
 }
 // END CUT HERE
-#line 6 "test/aoj/CGL_3_B.test.cpp"
+#line 6 "test/aoj/CGL_4_A.test.cpp"
 
 using namespace geometry;
 int main() {
 	int n; cin >> n;
 	vector<Point> p(n);
-	for(int i = 0; i < n; ++i) cin >> p[i];
-	cout << convexity(p) << '\n';
+	for(int i = 0; i < n; ++i) {
+		cin >> p[i];
+	}
+	vector<Point> ch = convexHull(p);
+	cout << ch.size() << '\n';
+	for(Point& e : ch) {
+		cout << (int)e.real() << " " << (int)e.imag() << '\n';
+	}
 	return 0;
 }
 

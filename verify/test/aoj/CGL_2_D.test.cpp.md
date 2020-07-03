@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#0d0c91c0cca30af9c1c9faef0cf04aa9">test/aoj</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj/CGL_2_D.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-11 19:59:08+09:00
+    - Last commit date: 2020-07-03 22:28:13+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_D">https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/all/CGL_2_D</a>
@@ -79,7 +79,7 @@ int main() {
 #include<bits/stdc++.h>
 using namespace std;
 
-#line 2 "test/aoj/../../Geometry/template.cpp"
+#line 2 "Geometry/template.cpp"
 using namespace std;
 
 // BEGIN CUT HERE
@@ -124,7 +124,7 @@ namespace geometry {
 		return projection(p - l.a, l.b - l.a) + l.a;
 	}
 	// 直線lを対称軸として点pと線対称な点
-	inline Point reflection(const Point &p, const Line &l) {
+	inline Point reflection(const Point& p, const Line& l) {
 		return p + (projection(p, l) - p) * 2.0;
 	}
 	// 反時計回り(a -> b -> c)
@@ -138,10 +138,10 @@ namespace geometry {
 	// 同一直線上(a -> c -> b)
 	static constexpr int CCW_ON_SEGMENT = 0b10000;
 	// 3点の位置関係
-	inline int ccw(const Point &a, Point b, Point c) {
+	inline int ccw(const Point& a, Point b, Point c) {
 		b = b - a, c = c - a;
-		if(cross(b, c) > EPS) return CCW_COUNTER_CLOCKWISE;
-		if(cross(b, c) < -EPS) return CCW_CLOCKWISE;
+		if(sgn(cross(b, c)) > 0) return CCW_COUNTER_CLOCKWISE;
+		if(sgn(cross(b, c)) < 0) return CCW_CLOCKWISE;
 		if(dot(b, c) < 0) return CCW_ONLINE_BACK;
 		if(norm(b) < norm(c)) return CCW_ONLINE_FRONT;
 		return CCW_ON_SEGMENT;
@@ -159,7 +159,7 @@ namespace geometry {
 		return not parallel(l1, l2);
 	}
 	// 線分と直線の交差判定
-	inline bool intersect(const Segment &s, const Line &l) {
+	inline bool intersect(const Segment& s, const Line& l) {
 		constexpr int plus = CCW_COUNTER_CLOCKWISE | CCW_ONLINE_BACK;
 		constexpr int minus = CCW_CLOCKWISE | CCW_ONLINE_FRONT;
 		int f[2] = {ccw(l.a, l.b, s.a), ccw(l.a, l.b, s.b)};
@@ -204,29 +204,29 @@ namespace geometry {
 		return ret;
 	}
 	// 点と点の距離
-	inline Real distance(const Point &a, const Point &b) {
+	inline Real distance(const Point& a, const Point& b) {
 		return abs(a - b);
 	}
 	// 点と直線の距離
-	inline Real distance(const Point &p, const Line &l) {
+	inline Real distance(const Point& p, const Line& l) {
 		return abs(p - projection(p, l));
 	}
 	// 点と線分の距離
-	inline Real distance(const Point &p, const Segment &s) {
+	inline Real distance(const Point& p, const Segment& s) {
 		const Point pro = projection(p, s);
 		const Line l(p, pro);
 		if(intersect(s, l)) return distance(p, pro);
 		return min(distance(p, s.a), distance(p, s.b));
 	}
 	// 線分と直線の距離
-	inline Real distance(const Segment &s, const Line &l) {
+	inline Real distance(const Segment& s, const Line& l) {
 		if(intersect(s, l)) return 0.0;
 		Real ret = distance(s.a, l);
 		ret = min(ret, distance(s.b, l));
 		return ret;
 	}
 	// 線分と線分の距離
-	inline Real distance(const Segment &s1, const Segment &s2) {
+	inline Real distance(const Segment& s1, const Segment& s2) {
 		if(intersect(s1, s2)) return 0.0;
 		Real ret = distance(s1.a, s2);
 		ret = min(ret, distance(s1.b, s2));
@@ -256,6 +256,28 @@ namespace geometry {
 			ret &= CCW_CLOCKWISE;
 		}
 		return ret == 0;
+	}
+	// 凸包（Monotone chain）
+	vector<Point> convexHull(vector<Point>& p) {
+		const int n = p.size();
+		sort(p.begin(), p.end(), [](Point& l, Point& r) {
+			return (sgn(r.imag(), l.imag()) != 0) ? (sgn(l.imag(), r.imag()) < 0) : (sgn(l.real(), r.real()) < 0);
+		});
+		vector<Point> ch(2 * n);
+		constexpr int mask = CCW_CLOCKWISE | CCW_ON_SEGMENT;
+		int k = 0;
+		for(int i = 0; i < n; ch[k++] = p[i++]) {
+			while(k >= 2 and ccw(ch[k - 2], ch[k - 1], p[i]) & mask) {
+				--k;
+			}
+		}
+		for(int i = n - 2, t = k + 1; i >= 0; ch[k++] = p[i--]) {
+			while(k >= t and ccw(ch[k - 2], ch[k - 1], p[i]) & mask) {
+				--k;
+			}
+		}
+		ch.resize(k - 1);
+		return ch;
 	}
 	inline istream& operator>>(istream& is, Point& p) {
 		Real x, y;

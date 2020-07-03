@@ -90,10 +90,10 @@ int main() {
 #include<bits/stdc++.h>
 using namespace std;
 
-#line 2 "test/yosupo/../../GraphTheory/TwoSatisfiability.cpp"
+#line 2 "GraphTheory/TwoSatisfiability.cpp"
 using namespace std;
 
-#line 2 "test/yosupo/../../GraphTheory/StronglyConnectedComponents.cpp"
+#line 2 "GraphTheory/StronglyConnectedComponents.cpp"
 using namespace std;
 
 // BEGIN CUT HERE
@@ -152,7 +152,7 @@ struct StronglyConnectedComponents {
 	}
 };
 // END CUT HERE
-#line 5 "test/yosupo/../../GraphTheory/TwoSatisfiability.cpp"
+#line 5 "GraphTheory/TwoSatisfiability.cpp"
 
 // BEGIN CUT HERE
 struct TwoSatisfiability {

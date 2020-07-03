@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../../../index.html#c77cf685f67ae44b42909da57e1be54a">tmp/Math/Combination/inverse</a>
 * <a href="{{ site.github.repository_url }}/blob/master/tmp/Math/Combination/inverse/combination copy.cpp">View this file on GitHub</a>
-    - Last commit date: 1970-01-01 00:00:00
+    - Last commit date: 2020-03-09 19:28:31+09:00
 
 
 

@@ -78,7 +78,7 @@ int main() {
 #include<bits/stdc++.h>
 using namespace std;
 
-#line 2 "test/yosupo/../../GraphTheory/LowestCommonAncestor.cpp"
+#line 2 "GraphTheory/LowestCommonAncestor.cpp"
 using namespace std;
 
 // BEGIN CUT HERE
