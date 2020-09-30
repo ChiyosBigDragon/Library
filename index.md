@@ -1,189 +1,256 @@
 ---
-layout: default
+data:
+  libraryCategories:
+  - name: DataStructure
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: DataStructure/SegmentTree.cpp
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
+    - icon: ':heavy_check_mark:'
+      path: DataStructure/UnionFind.cpp
+      title: DataStructure/UnionFind.cpp
+  - name: Geometry
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: Geometry/template.cpp
+      title: Geometry/template.cpp
+  - name: GraphTheory
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: GraphTheory/LowestCommonAncestor.cpp
+      title: GraphTheory/LowestCommonAncestor.cpp
+    - icon: ':heavy_check_mark:'
+      path: GraphTheory/StronglyConnectedComponents.cpp
+      title: GraphTheory/StronglyConnectedComponents.cpp
+    - icon: ':heavy_check_mark:'
+      path: GraphTheory/TwoSatisfiability.cpp
+      title: GraphTheory/TwoSatisfiability.cpp
+  - name: .
+    pages:
+    - icon: ':warning:'
+      path: snippet.py
+      title: snippet.py
+  - name: tmp
+    pages:
+    - icon: ':warning:'
+      path: tmp/BFS.cpp
+      title: tmp/BFS.cpp
+    - icon: ':warning:'
+      path: tmp/Bellman_Ford.cpp
+      title: tmp/Bellman_Ford.cpp
+    - icon: ':warning:'
+      path: tmp/DFS.cpp
+      title: tmp/DFS.cpp
+    - icon: ':warning:'
+      path: tmp/DFSsaiki.cpp
+      title: tmp/DFSsaiki.cpp
+    - icon: ':warning:'
+      path: tmp/DP.cpp
+      title: tmp/DP.cpp
+    - icon: ':warning:'
+      path: tmp/Dijkstra(Route).cpp
+      title: tmp/Dijkstra(Route).cpp
+    - icon: ':warning:'
+      path: tmp/Dijkstra.cpp
+      title: tmp/Dijkstra.cpp
+    - icon: ':warning:'
+      path: tmp/Dinic.cpp
+      title: tmp/Dinic.cpp
+    - icon: ':warning:'
+      path: tmp/LIS.cpp
+      title: tmp/LIS.cpp
+    - icon: ':warning:'
+      path: tmp/LevenshteinDistance.cpp
+      title: tmp/LevenshteinDistance.cpp
+    - icon: ':warning:'
+      path: tmp/MST.cpp
+      title: tmp/MST.cpp
+    - icon: ':warning:'
+      path: tmp/SegmentTree.cpp
+      title: tmp/SegmentTree.cpp
+    - icon: ':warning:'
+      path: tmp/Sieve_of_Eratosthenes.cpp
+      title: tmp/Sieve_of_Eratosthenes.cpp
+    - icon: ':warning:'
+      path: tmp/UnionFind.cpp
+      title: tmp/UnionFind.cpp
+    - icon: ':warning:'
+      path: tmp/WarshallFloyd.cpp
+      title: tmp/WarshallFloyd.cpp
+    - icon: ':warning:'
+      path: tmp/WeightedUnionFind.cpp
+      title: tmp/WeightedUnionFind.cpp
+    - icon: ':warning:'
+      path: tmp/binary_search.cpp
+      title: tmp/binary_search.cpp
+    - icon: ':warning:'
+      path: tmp/bit.cpp
+      title: tmp/bit.cpp
+    - icon: ':warning:'
+      path: tmp/clock.cpp
+      title: tmp/clock.cpp
+    - icon: ':warning:'
+      path: tmp/divisor.cpp
+      title: tmp/divisor.cpp
+    - icon: ':warning:'
+      path: tmp/gcd_lcm.cpp
+      title: tmp/gcd_lcm.cpp
+    - icon: ':warning:'
+      path: tmp/imos1d.cpp
+      title: tmp/imos1d.cpp
+    - icon: ':warning:'
+      path: tmp/imos2d.cpp
+      title: tmp/imos2d.cpp
+    - icon: ':warning:'
+      path: tmp/imos2d0.cpp
+      title: tmp/imos2d0.cpp
+    - icon: ':warning:'
+      path: tmp/is_prime.cpp
+      title: tmp/is_prime.cpp
+    - icon: ':warning:'
+      path: tmp/leap_year.cpp
+      title: tmp/leap_year.cpp
+    - icon: ':warning:'
+      path: tmp/modPow.cpp
+      title: tmp/modPow.cpp
+    - icon: ':warning:'
+      path: tmp/output_option.cpp
+      title: tmp/output_option.cpp
+    - icon: ':warning:'
+      path: tmp/prime_factorization.cpp
+      title: tmp/prime_factorization.cpp
+    - icon: ':warning:'
+      path: tmp/topological_sort.cpp
+      title: tmp/topological_sort.cpp
+    - icon: ':warning:'
+      path: "tmp/\u6795\u6C7A\u3081.cpp"
+      title: "tmp/\u6795\u6C7A\u3081.cpp"
+  - name: tmp/GraphTheory/LCA
+    pages:
+    - icon: ':warning:'
+      path: tmp/GraphTheory/LCA/LCA.cpp
+      title: tmp/GraphTheory/LCA/LCA.cpp
+  - name: tmp/GraphTheory/LCA/verify
+    pages:
+    - icon: ':warning:'
+      path: tmp/GraphTheory/LCA/verify/ABC014_D.cpp
+      title: tmp/GraphTheory/LCA/verify/ABC014_D.cpp
+    - icon: ':warning:'
+      path: tmp/GraphTheory/LCA/verify/GRL_5_C.cpp
+      title: tmp/GraphTheory/LCA/verify/GRL_5_C.cpp
+  - name: tmp/Math/Combination/inverse
+    pages:
+    - icon: ':warning:'
+      path: tmp/Math/Combination/inverse/combination copy.cpp
+      title: tmp/Math/Combination/inverse/combination copy.cpp
+    - icon: ':warning:'
+      path: tmp/Math/Combination/inverse/combination.hpp
+      title: tmp/Math/Combination/inverse/combination.hpp
+  - name: tmp/Math/Combination/inverse/verify
+    pages:
+    - icon: ':warning:'
+      path: tmp/Math/Combination/inverse/verify/ABC021_D.cpp
+      title: tmp/Math/Combination/inverse/verify/ABC021_D.cpp
+    - icon: ':warning:'
+      path: tmp/Math/Combination/inverse/verify/yuki117.cpp
+      title: tmp/Math/Combination/inverse/verify/yuki117.cpp
+  - name: tmp/Math/Combination/pascal
+    pages:
+    - icon: ':warning:'
+      path: tmp/Math/Combination/pascal/combination_pascal.cpp
+      title: tmp/Math/Combination/pascal/combination_pascal.cpp
+  - name: tmp/Math/Combination/pascal/verify
+    pages:
+    - icon: ':warning:'
+      path: tmp/Math/Combination/pascal/verify/AOJ1501.cpp
+      title: tmp/Math/Combination/pascal/verify/AOJ1501.cpp
+  - name: tmp/Math/Matrix
+    pages:
+    - icon: ':warning:'
+      path: tmp/Math/Matrix/Matrix.cpp
+      title: tmp/Math/Matrix/Matrix.cpp
+  - name: tmp/Math/Matrix/verify
+    pages:
+    - icon: ':warning:'
+      path: tmp/Math/Matrix/verify/ABC009_D.cpp
+      title: tmp/Math/Matrix/verify/ABC009_D.cpp
+    - icon: ':warning:'
+      path: tmp/Math/Matrix/verify/ITP1_7_D.cpp
+      title: tmp/Math/Matrix/verify/ITP1_7_D.cpp
+    - icon: ':warning:'
+      path: tmp/Math/Matrix/verify/yuki194.cpp
+      title: tmp/Math/Matrix/verify/yuki194.cpp
+  - name: tmp/Math/ModInt
+    pages:
+    - icon: ':warning:'
+      path: tmp/Math/ModInt/ModInt.cpp
+      title: tmp/Math/ModInt/ModInt.cpp
+  - name: tmp/Math/ModInt/verify
+    pages:
+    - icon: ':warning:'
+      path: tmp/Math/ModInt/verify/ChokudaiSpeedRun001_G.cpp
+      title: tmp/Math/ModInt/verify/ChokudaiSpeedRun001_G.cpp
+  verificationCategories:
+  - name: test/aoj
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_1_A.test.cpp
+      title: test/aoj/CGL_1_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_1_B.test.cpp
+      title: test/aoj/CGL_1_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_1_C.test.cpp
+      title: test/aoj/CGL_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_2_A.test.cpp
+      title: test/aoj/CGL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_2_B.test.cpp
+      title: test/aoj/CGL_2_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_2_C.test.cpp
+      title: test/aoj/CGL_2_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_2_D.test.cpp
+      title: test/aoj/CGL_2_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_3_A.test.cpp
+      title: test/aoj/CGL_3_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_3_B.test.cpp
+      title: test/aoj/CGL_3_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/CGL_4_A.test.cpp
+      title: test/aoj/CGL_4_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_A.test.cpp
+      title: test/aoj/DSL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/DSL_2_B.test.cpp
+      title: test/aoj/DSL_2_B.test.cpp
+  - name: test/yosupo
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/LowestCommonAncestor.test.cpp
+      title: test/yosupo/LowestCommonAncestor.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/PointAddRangeSum.test.cpp
+      title: test/yosupo/PointAddRangeSum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/StaticRMQ.test.cpp
+      title: test/yosupo/StaticRMQ.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/StaticRangeSum.test.cpp
+      title: test/yosupo/StaticRangeSum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/StronglyConnectedComponents.test.cpp
+      title: test/yosupo/StronglyConnectedComponents.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/TwoSatisfiability.test.cpp
+      title: test/yosupo/TwoSatisfiability.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/UnionFind.test.cpp
+      title: test/yosupo/UnionFind.test.cpp
+layout: toppage
 ---
-
-<!-- mathjax config similar to math.stackexchange -->
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: { equationNumbers: { autoNumber: "AMS" }},
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { matchFontHeight: false },
-    displayAlign: "left",
-    displayIndent: "2em"
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-balloon-js@1.1.2/jquery.balloon.min.js" integrity="sha256-ZEYs9VrgAeNuPvs15E39OsyOJaIkXEEt10fzxJ20+2I=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/js/copy-button.js"></script>
-<link rel="stylesheet" href="assets/css/copy-button.css" />
-
-
-# {{ site.title }}
-
-[![Actions Status]({{ site.github.repository_url }}/workflows/verify/badge.svg)]({{ site.github.repository_url }}/actions)
-<a href="{{ site.github.repository_url }}"><img src="https://img.shields.io/github/last-commit/{{ site.github.owner_name }}/{{ site.github.repository_name }}" /></a>
-
-{% if site.github.project_tagline %}{{ site.github.project_tagline }}{% else %}This documentation is automatically generated by <a href="https://github.com/online-judge-tools/verification-helper">online-judge-tools/verification-helper</a>.{% endif %}
-
-## Library Files
-
-<div id="5e248f107086635fddcead5bf28943fc"></div>
-
-### DataStructure
-
-* :heavy_check_mark: <a href="library/DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
-
-
-<div id="d9c6333623e6357515fcbf17be806273"></div>
-
-### Geometry
-
-* :heavy_check_mark: <a href="library/Geometry/template.cpp.html">Geometry/template.cpp</a>
-
-
-<div id="f381732df2a59e8e35d7811ba3c2868c"></div>
-
-### GraphTheory
-
-* :heavy_check_mark: <a href="library/GraphTheory/LowestCommonAncestor.cpp.html">GraphTheory/LowestCommonAncestor.cpp</a>
-* :heavy_check_mark: <a href="library/GraphTheory/StronglyConnectedComponents.cpp.html">GraphTheory/StronglyConnectedComponents.cpp</a>
-* :heavy_check_mark: <a href="library/GraphTheory/TwoSatisfiability.cpp.html">GraphTheory/TwoSatisfiability.cpp</a>
-
-
-<div id="fa816edb83e95bf0c8da580bdfd491ef"></div>
-
-### tmp
-
-* :warning: <a href="library/tmp/BFS.cpp.html">tmp/BFS.cpp</a>
-* :warning: <a href="library/tmp/Bellman_Ford.cpp.html">tmp/Bellman_Ford.cpp</a>
-* :warning: <a href="library/tmp/DFS.cpp.html">tmp/DFS.cpp</a>
-* :warning: <a href="library/tmp/DFSsaiki.cpp.html">tmp/DFSsaiki.cpp</a>
-* :warning: <a href="library/tmp/DP.cpp.html">tmp/DP.cpp</a>
-* :warning: <a href="library/tmp/Dijkstra(Route).cpp.html">tmp/Dijkstra(Route).cpp</a>
-* :warning: <a href="library/tmp/Dijkstra.cpp.html">tmp/Dijkstra.cpp</a>
-* :warning: <a href="library/tmp/Dinic.cpp.html">tmp/Dinic.cpp</a>
-* :warning: <a href="library/tmp/LIS.cpp.html">tmp/LIS.cpp</a>
-* :warning: <a href="library/tmp/LevenshteinDistance.cpp.html">tmp/LevenshteinDistance.cpp</a>
-* :warning: <a href="library/tmp/MST.cpp.html">tmp/MST.cpp</a>
-* :warning: <a href="library/tmp/SegmentTree.cpp.html">tmp/SegmentTree.cpp</a>
-* :warning: <a href="library/tmp/Sieve_of_Eratosthenes.cpp.html">tmp/Sieve_of_Eratosthenes.cpp</a>
-* :warning: <a href="library/tmp/UnionFind.cpp.html">tmp/UnionFind.cpp</a>
-* :warning: <a href="library/tmp/WarshallFloyd.cpp.html">tmp/WarshallFloyd.cpp</a>
-* :warning: <a href="library/tmp/WeightedUnionFind.cpp.html">tmp/WeightedUnionFind.cpp</a>
-* :warning: <a href="library/tmp/binary_search.cpp.html">tmp/binary_search.cpp</a>
-* :warning: <a href="library/tmp/bit.cpp.html">tmp/bit.cpp</a>
-* :warning: <a href="library/tmp/clock.cpp.html">tmp/clock.cpp</a>
-* :warning: <a href="library/tmp/divisor.cpp.html">tmp/divisor.cpp</a>
-* :warning: <a href="library/tmp/gcd_lcm.cpp.html">tmp/gcd_lcm.cpp</a>
-* :warning: <a href="library/tmp/imos1d.cpp.html">tmp/imos1d.cpp</a>
-* :warning: <a href="library/tmp/imos2d.cpp.html">tmp/imos2d.cpp</a>
-* :warning: <a href="library/tmp/imos2d0.cpp.html">tmp/imos2d0.cpp</a>
-* :warning: <a href="library/tmp/is_prime.cpp.html">tmp/is_prime.cpp</a>
-* :warning: <a href="library/tmp/leap_year.cpp.html">tmp/leap_year.cpp</a>
-* :warning: <a href="library/tmp/modPow.cpp.html">tmp/modPow.cpp</a>
-* :warning: <a href="library/tmp/output_option.cpp.html">tmp/output_option.cpp</a>
-* :warning: <a href="library/tmp/prime_factorization.cpp.html">tmp/prime_factorization.cpp</a>
-* :warning: <a href="library/tmp/topological_sort.cpp.html">tmp/topological_sort.cpp</a>
-* :warning: <a href="library/tmp/枕決め.cpp.html">tmp/枕決め.cpp</a>
-
-
-<div id="d7c3d82c29e0fe8197a46b07109ed067"></div>
-
-### tmp/GraphTheory/LCA
-
-* :warning: <a href="library/tmp/GraphTheory/LCA/LCA.cpp.html">tmp/GraphTheory/LCA/LCA.cpp</a>
-
-
-<div id="95823e082aa65886d45d316a0caae256"></div>
-
-### tmp/GraphTheory/LCA/verify
-
-* :warning: <a href="library/tmp/GraphTheory/LCA/verify/ABC014_D.cpp.html">tmp/GraphTheory/LCA/verify/ABC014_D.cpp</a>
-* :warning: <a href="library/tmp/GraphTheory/LCA/verify/GRL_5_C.cpp.html">tmp/GraphTheory/LCA/verify/GRL_5_C.cpp</a>
-
-
-<div id="c77cf685f67ae44b42909da57e1be54a"></div>
-
-### tmp/Math/Combination/inverse
-
-* :warning: <a href="library/tmp/Math/Combination/inverse/combination copy.cpp.html">tmp/Math/Combination/inverse/combination copy.cpp</a>
-* :warning: <a href="library/tmp/Math/Combination/inverse/combination.hpp.html">tmp/Math/Combination/inverse/combination.hpp</a>
-
-
-<div id="a2cfff885db9b211df4b1bb0d696881a"></div>
-
-### tmp/Math/Combination/inverse/verify
-
-* :warning: <a href="library/tmp/Math/Combination/inverse/verify/ABC021_D.cpp.html">tmp/Math/Combination/inverse/verify/ABC021_D.cpp</a>
-* :warning: <a href="library/tmp/Math/Combination/inverse/verify/yuki117.cpp.html">tmp/Math/Combination/inverse/verify/yuki117.cpp</a>
-
-
-<div id="ae3783e453db1d5e00197869d6a0cced"></div>
-
-### tmp/Math/Combination/pascal
-
-* :warning: <a href="library/tmp/Math/Combination/pascal/combination_pascal.cpp.html">tmp/Math/Combination/pascal/combination_pascal.cpp</a>
-
-
-<div id="cd55c4c6c9084ec65cf199c46298326c"></div>
-
-### tmp/Math/Combination/pascal/verify
-
-* :warning: <a href="library/tmp/Math/Combination/pascal/verify/AOJ1501.cpp.html">tmp/Math/Combination/pascal/verify/AOJ1501.cpp</a>
-
-
-<div id="5a65a1effde5b0ea70629e489e28fe51"></div>
-
-### tmp/Math/Matrix
-
-* :warning: <a href="library/tmp/Math/Matrix/Matrix.cpp.html">tmp/Math/Matrix/Matrix.cpp</a>
-
-
-<div id="21cace77429b0eae219f5b50e59adfaf"></div>
-
-### tmp/Math/Matrix/verify
-
-* :warning: <a href="library/tmp/Math/Matrix/verify/ABC009_D.cpp.html">tmp/Math/Matrix/verify/ABC009_D.cpp</a>
-* :warning: <a href="library/tmp/Math/Matrix/verify/ITP1_7_D.cpp.html">tmp/Math/Matrix/verify/ITP1_7_D.cpp</a>
-* :warning: <a href="library/tmp/Math/Matrix/verify/yuki194.cpp.html">tmp/Math/Matrix/verify/yuki194.cpp</a>
-
-
-<div id="51f14846ca8674ab4b6e13d40504d6ba"></div>
-
-### tmp/Math/ModInt
-
-* :warning: <a href="library/tmp/Math/ModInt/ModInt.cpp.html">tmp/Math/ModInt/ModInt.cpp</a>
-
-
-<div id="e1dd9be4c93b41ca242fc9510df5f942"></div>
-
-### tmp/Math/ModInt/verify
-
-* :warning: <a href="library/tmp/Math/ModInt/verify/ChokudaiSpeedRun001_G.cpp.html">tmp/Math/ModInt/verify/ChokudaiSpeedRun001_G.cpp</a>
-
-
-## Verify Files
-
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_A.test.cpp.html">test/aoj/CGL_1_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_B.test.cpp.html">test/aoj/CGL_1_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_1_C.test.cpp.html">test/aoj/CGL_1_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_2_A.test.cpp.html">test/aoj/CGL_2_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_2_B.test.cpp.html">test/aoj/CGL_2_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_2_C.test.cpp.html">test/aoj/CGL_2_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_2_D.test.cpp.html">test/aoj/CGL_2_D.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_3_A.test.cpp.html">test/aoj/CGL_3_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_3_B.test.cpp.html">test/aoj/CGL_3_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj/CGL_4_A.test.cpp.html">test/aoj/CGL_4_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/yosupo/LowestCommonAncestor.test.cpp.html">test/yosupo/LowestCommonAncestor.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/yosupo/StronglyConnectedComponents.test.cpp.html">test/yosupo/StronglyConnectedComponents.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/yosupo/TwoSatisfiability.test.cpp.html">test/yosupo/TwoSatisfiability.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/yosupo/UnionFind.test.cpp.html">test/yosupo/UnionFind.test.cpp</a>
-
-
