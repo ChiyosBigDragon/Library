@@ -4,14 +4,14 @@ using namespace std;
 
 #include "../../DataStructure/SegmentTree.cpp"
 
-int f(int l, int r) {
+auto f = [](int l, int r) {
 	return min(l, r);
-}
+};
 constexpr int e = (1ll << 31) - 1;
 
 int main() {
 	int n, q; cin >> n >> q;
-	SegmentTree<int, f, e> seg(n);
+	SegmentTree<int> seg(n, f, e);
 	while(q--) {
 		int com, x, y; cin >> com >> x >> y;
 		if(com == 0) {

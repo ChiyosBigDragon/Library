@@ -4,22 +4,21 @@ using namespace std;
 
 #include "../../DataStructure/SegmentTree.cpp"
 
-int f(int l, int r) {
+auto f = [](int64_t l, int64_t r) {
 	return l + r;
-}
-constexpr int e = 0;
+};
+constexpr int64_t e = 0;
 
 int main() {
 	int n, q; cin >> n >> q;
-	SegmentTree<int, f, e> seg(n);
+	SegmentTree<int64_t> seg(n, f, e);
 	while(q--) {
 		int com, x, y; cin >> com >> x >> y;
-		--x;
 		if(com == 0) {
-			seg.set(x, seg[x] + y);
+			seg.set(x - 1, seg[x - 1] + y);
 		}
 		if(com == 1) {
-			cout << seg.get(x, y) << '\n';
+			cout << seg.get(x - 1, y) << '\n';
 		}
 	}
 	return 0;

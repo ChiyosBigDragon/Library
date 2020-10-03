@@ -4,27 +4,29 @@ using namespace std;
 // BEGIN CUT HERE
 /**
  * @brief セグメント木
- * @tparam S モノイド
- * @tparam F 二項演算 (S, S) -> S 
- * @tparam e モノイドの単位元
+ * @tparam S 要素モノイド
  */
-template<class S, auto F, S e>
+template<class S>
 struct SegmentTree {
 public:
 	/**
 	 * @brief 単位元で初期化
-	 * @param _N サイズ
+	 * @param N サイズ
+	 * @param F 二項演算 (S, S) -> S 
+ 	 * @param e 要素モノイドの単位元
 	 */
-	SegmentTree(size_t _N) : SegmentTree(vector<S>(_N, e)) {}
+	SegmentTree(const size_t N, const function<S(S, S)>& F, const S& e) : SegmentTree(vector<S>(N, e), F, e) {}
 	/**
 	 * @brief 与配列で初期化
-	 * @param _v 配列
+	 * @param v 配列
+	 * @param F 二項演算 (S, S) -> S 
+ 	 * @param e 要素モノイドの単位元
 	 */
-	SegmentTree(const vector<S>& _v) {
-		N = pow2(_v.size());
-		v = vector<S>(N << 1, e);
-		for(int i = 0; i < _v.size(); ++i) {
-			v[N + i] = _v[i];
+	SegmentTree(const vector<S>& v, const function<S(S, S)>& F, const S& e) : F(F), e(e) {
+		N = 1 << pow2(v.size());
+		val = vector<S>(N << 1, e);
+		for(int i = 0; i < v.size(); ++i) {
+			val[N + i] = v[i];
 		}
 		for(int i = N - 1; i >= 1; --i) {
 			update(i);
@@ -33,10 +35,10 @@ public:
 	/**
 	 * @brief 1点更新
 	 */
-	void set(size_t idx, const S val) {
+	void set(size_t idx, const S& _val) {
 		assert(idx < N);
 		idx += N;
-		v[idx] = val;
+		val[idx] = _val;
 		while(idx > 1) {
 			idx >>= 1;
 			update(idx);
@@ -50,8 +52,12 @@ public:
 		S valL = e;
 		S valR = e;
 		for(l += N, r += N; l < r; l >>= 1, r >>= 1) {
-			valL = (l & 1) ? F(valL, v[l++]) : valL;
-			valR = (r & 1) ? F(v[--r], valR) : valR;
+			if(l & 1) {
+				valL = F(valL, val[l++]);
+			}
+			if(r & 1) {
+				valR = F(val[--r], valR);
+			}
 		}
 		return F(valL, valR);
 	}
@@ -60,33 +66,35 @@ public:
 	 */
 	S get(const size_t idx) {
 		assert(idx < N);
-		return v[N + idx];
+		return val[N + idx];
 	}
 	/**
 	 * @brief 1点取得
 	 */
 	S operator[](const size_t idx) {
 		assert(idx < N);
-		return v[N + idx];
+		return val[N + idx];
 	}
 private:
+	const function<S(S, S)> F;
+	const S e;
 	size_t N;
-	vector<S> v;
+	vector<S> val;
 	/**
-	 * @return n <= k なる最小の2べき k
+	 * @return n <= 2^k なる最小の k
 	 */
-	size_t pow2(size_t n) {
-		size_t sz = 1;
-		while(sz < n) {
-			sz <<= 1;
+	size_t pow2(const size_t n) {
+		size_t k = 0;
+		while((1 << k) < n) {
+			++k;
 		}
-		return sz;
+		return k;
 	}
 	/**
 	 * @brief v[idx]の更新
 	 */
 	void update(size_t idx) {
-		v[idx] = F(v[idx << 1], v[(idx << 1) | 1]);
+		val[idx] = F(val[idx << 1], val[(idx << 1) | 1]);
 	}
 };
 // END CUT HERE
