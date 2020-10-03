@@ -34,10 +34,10 @@ public:
 		N = 1 << height;
 		val = vector<S>(N << 1, se);
 		lazy = vector<T>(N << 1, te);
-		for(int i = 0; i < v.size(); ++i) {
+		for(size_t i = 0; i < v.size(); ++i) {
 			val[N + i] = v[i];
 		}
-		for(int i = N - 1; i >= 1; --i) {
+		for(size_t i = N - 1; i >= 1; --i) {
 			update(i);
 		}
 	}

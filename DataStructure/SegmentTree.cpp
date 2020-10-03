@@ -25,10 +25,10 @@ public:
 	SegmentTree(const vector<S>& v, const function<S(S, S)>& F, const S& e) : F(F), e(e) {
 		N = 1 << pow2(v.size());
 		val = vector<S>(N << 1, e);
-		for(int i = 0; i < v.size(); ++i) {
+		for(size_t i = 0; i < v.size(); ++i) {
 			val[N + i] = v[i];
 		}
-		for(int i = N - 1; i >= 1; --i) {
+		for(size_t i = N - 1; i >= 1; --i) {
 			update(i);
 		}
 	}
