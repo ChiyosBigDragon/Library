@@ -15,6 +15,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_G.test.cpp
     title: test/aoj/DSL_2_G.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL_2_H.test.cpp
+    title: test/aoj/DSL_2_H.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/DSL_2_I.test.cpp
+    title: test/aoj/DSL_2_I.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -149,6 +155,8 @@ data:
   timestamp: '2020-10-03 16:59:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/DSL_2_I.test.cpp
+  - test/aoj/DSL_2_H.test.cpp
   - test/aoj/DSL_2_G.test.cpp
   - test/aoj/DSL_2_D.test.cpp
   - test/aoj/DSL_2_E.test.cpp
