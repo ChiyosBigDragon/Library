@@ -243,16 +243,16 @@ data:
   timestamp: '2020-07-03 22:28:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/CGL_1_B.test.cpp
+  - test/aoj/CGL_2_C.test.cpp
   - test/aoj/CGL_1_A.test.cpp
+  - test/aoj/CGL_2_B.test.cpp
+  - test/aoj/CGL_2_D.test.cpp
+  - test/aoj/CGL_4_A.test.cpp
+  - test/aoj/CGL_1_C.test.cpp
   - test/aoj/CGL_3_B.test.cpp
   - test/aoj/CGL_2_A.test.cpp
-  - test/aoj/CGL_2_C.test.cpp
-  - test/aoj/CGL_2_D.test.cpp
-  - test/aoj/CGL_2_B.test.cpp
-  - test/aoj/CGL_4_A.test.cpp
   - test/aoj/CGL_3_A.test.cpp
-  - test/aoj/CGL_1_B.test.cpp
-  - test/aoj/CGL_1_C.test.cpp
 documentation_of: Geometry/template.cpp
 layout: document
 redirect_from:

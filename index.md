@@ -28,6 +28,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: GraphTheory/TwoSatisfiability.cpp
       title: GraphTheory/TwoSatisfiability.cpp
+  - name: Math
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: Math/ModInt.cpp
+      title: x ^ n
   - name: .
     pages:
     - icon: ':warning:'
@@ -258,6 +263,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/PointAddRangeSum.test.cpp
       title: test/yosupo/PointAddRangeSum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/PointSetRangeComposite.test.cpp
+      title: test/yosupo/PointSetRangeComposite.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/StaticRMQ.test.cpp
       title: test/yosupo/StaticRMQ.test.cpp

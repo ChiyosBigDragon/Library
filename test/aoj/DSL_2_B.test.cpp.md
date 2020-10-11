@@ -26,18 +26,18 @@ data:
     \ @param F \u4E8C\u9805\u6F14\u7B97 (S, S) -> S \n \t * @param e \u8981\u7D20\u30E2\
     \u30CE\u30A4\u30C9\u306E\u5358\u4F4D\u5143\n\t */\n\tSegmentTree(const vector<S>&\
     \ v, const function<S(S, S)>& F, const S& e) : F(F), e(e) {\n\t\tN = 1 << pow2(v.size());\n\
-    \t\tval = vector<S>(N << 1, e);\n\t\tfor(int i = 0; i < v.size(); ++i) {\n\t\t\
-    \tval[N + i] = v[i];\n\t\t}\n\t\tfor(int i = N - 1; i >= 1; --i) {\n\t\t\tupdate(i);\n\
-    \t\t}\n\t}\n\t/**\n\t * @brief 1\u70B9\u66F4\u65B0\n\t */\n\tvoid set(size_t idx,\
-    \ const S& _val) {\n\t\tassert(idx < N);\n\t\tidx += N;\n\t\tval[idx] = _val;\n\
-    \t\twhile(idx > 1) {\n\t\t\tidx >>= 1;\n\t\t\tupdate(idx);\n\t\t}\n\t}\n\t/**\n\
-    \t * @brief \u533A\u9593\u53D6\u5F97[l, r)\n\t */\n\tS get(size_t l, size_t r)\
-    \ {\n\t\tassert(l < r and r <= N);\n\t\tS valL = e;\n\t\tS valR = e;\n\t\tfor(l\
-    \ += N, r += N; l < r; l >>= 1, r >>= 1) {\n\t\t\tif(l & 1) {\n\t\t\t\tvalL =\
-    \ F(valL, val[l++]);\n\t\t\t}\n\t\t\tif(r & 1) {\n\t\t\t\tvalR = F(val[--r], valR);\n\
-    \t\t\t}\n\t\t}\n\t\treturn F(valL, valR);\n\t}\n\t/**\n\t * @brief 1\u70B9\u53D6\
-    \u5F97\n\t */\n\tS get(const size_t idx) {\n\t\tassert(idx < N);\n\t\treturn val[N\
-    \ + idx];\n\t}\n\t/**\n\t * @brief 1\u70B9\u53D6\u5F97\n\t */\n\tS operator[](const\
+    \t\tval = vector<S>(N << 1, e);\n\t\tfor(size_t i = 0; i < v.size(); ++i) {\n\t\
+    \t\tval[N + i] = v[i];\n\t\t}\n\t\tfor(size_t i = N - 1; i >= 1; --i) {\n\t\t\t\
+    update(i);\n\t\t}\n\t}\n\t/**\n\t * @brief 1\u70B9\u66F4\u65B0\n\t */\n\tvoid\
+    \ set(size_t idx, const S& _val) {\n\t\tassert(idx < N);\n\t\tidx += N;\n\t\t\
+    val[idx] = _val;\n\t\twhile(idx > 1) {\n\t\t\tidx >>= 1;\n\t\t\tupdate(idx);\n\
+    \t\t}\n\t}\n\t/**\n\t * @brief \u533A\u9593\u53D6\u5F97[l, r)\n\t */\n\tS get(size_t\
+    \ l, size_t r) {\n\t\tassert(l < r and r <= N);\n\t\tS valL = e;\n\t\tS valR =\
+    \ e;\n\t\tfor(l += N, r += N; l < r; l >>= 1, r >>= 1) {\n\t\t\tif(l & 1) {\n\t\
+    \t\t\tvalL = F(valL, val[l++]);\n\t\t\t}\n\t\t\tif(r & 1) {\n\t\t\t\tvalR = F(val[--r],\
+    \ valR);\n\t\t\t}\n\t\t}\n\t\treturn F(valL, valR);\n\t}\n\t/**\n\t * @brief 1\u70B9\
+    \u53D6\u5F97\n\t */\n\tS get(const size_t idx) {\n\t\tassert(idx < N);\n\t\treturn\
+    \ val[N + idx];\n\t}\n\t/**\n\t * @brief 1\u70B9\u53D6\u5F97\n\t */\n\tS operator[](const\
     \ size_t idx) {\n\t\tassert(idx < N);\n\t\treturn val[N + idx];\n\t}\nprivate:\n\
     \tconst function<S(S, S)> F;\n\tconst S e;\n\tsize_t N;\n\tvector<S> val;\n\t\
     /**\n\t * @return n <= 2^k \u306A\u308B\u6700\u5C0F\u306E k\n\t */\n\tsize_t pow2(const\
@@ -62,7 +62,7 @@ data:
   isVerificationFile: true
   path: test/aoj/DSL_2_B.test.cpp
   requiredBy: []
-  timestamp: '2020-10-03 16:59:03+09:00'
+  timestamp: '2020-10-04 03:22:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/DSL_2_B.test.cpp

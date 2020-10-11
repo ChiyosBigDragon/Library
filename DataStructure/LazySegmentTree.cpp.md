@@ -47,13 +47,13 @@ data:
     \ S)>& F, const function<S(S, T)>& G, const function<T(T, T)>& H, const S& se,\
     \ const T& te) : F(F), G(G), H(H), se(se), te(te) {\n\t\theight = pow2(v.size());\n\
     \t\tN = 1 << height;\n\t\tval = vector<S>(N << 1, se);\n\t\tlazy = vector<T>(N\
-    \ << 1, te);\n\t\tfor(int i = 0; i < v.size(); ++i) {\n\t\t\tval[N + i] = v[i];\n\
-    \t\t}\n\t\tfor(int i = N - 1; i >= 1; --i) {\n\t\t\tupdate(i);\n\t\t}\n\t}\n\t\
-    /**\n\t * @brief 1\u70B9\u66F4\u65B0\n\t */\n\tvoid set(size_t idx, const S& _val)\
-    \ {\n\t\tassert(idx < N);\n\t\tidx += N;\n\t\tfor(size_t i = height; i >= 1; --i)\
-    \ {\n\t\t\tapply(idx >> i, lazy[idx >> i]);\n\t\t}\n\t\tval[idx] = _val;\n\t\t\
-    while(idx > 1) {\n\t\t\tidx >>= 1;\n\t\t\tupdate(idx);\n\t\t}\n\t}\n\t/**\n\t\
-    \ * @brief \u533A\u9593\u53D6\u5F97[l, r)\n\t */\n\tS get(size_t l, size_t r)\
+    \ << 1, te);\n\t\tfor(size_t i = 0; i < v.size(); ++i) {\n\t\t\tval[N + i] = v[i];\n\
+    \t\t}\n\t\tfor(size_t i = N - 1; i >= 1; --i) {\n\t\t\tupdate(i);\n\t\t}\n\t}\n\
+    \t/**\n\t * @brief 1\u70B9\u66F4\u65B0\n\t */\n\tvoid set(size_t idx, const S&\
+    \ _val) {\n\t\tassert(idx < N);\n\t\tidx += N;\n\t\tfor(size_t i = height; i >=\
+    \ 1; --i) {\n\t\t\tapply(idx >> i, lazy[idx >> i]);\n\t\t}\n\t\tval[idx] = _val;\n\
+    \t\twhile(idx > 1) {\n\t\t\tidx >>= 1;\n\t\t\tupdate(idx);\n\t\t}\n\t}\n\t/**\n\
+    \t * @brief \u533A\u9593\u53D6\u5F97[l, r)\n\t */\n\tS get(size_t l, size_t r)\
     \ {\n\t\tassert(l < r and r <= N);\n\t\tl += N;\n\t\tr += N;\n\t\tfor(size_t i\
     \ = height; i >= 1; --i) {\n\t\t\tif((l >> i) << i != l) apply(l >> i, lazy[l\
     \ >> i]);\n\t\t\tif((r >> i) << i != r) apply((r - 1) >> i, lazy[(r - 1) >> i]);\n\
@@ -108,13 +108,13 @@ data:
     \ function<S(S, T)>& G, const function<T(T, T)>& H, const S& se, const T& te)\
     \ : F(F), G(G), H(H), se(se), te(te) {\n\t\theight = pow2(v.size());\n\t\tN =\
     \ 1 << height;\n\t\tval = vector<S>(N << 1, se);\n\t\tlazy = vector<T>(N << 1,\
-    \ te);\n\t\tfor(int i = 0; i < v.size(); ++i) {\n\t\t\tval[N + i] = v[i];\n\t\t\
-    }\n\t\tfor(int i = N - 1; i >= 1; --i) {\n\t\t\tupdate(i);\n\t\t}\n\t}\n\t/**\n\
-    \t * @brief 1\u70B9\u66F4\u65B0\n\t */\n\tvoid set(size_t idx, const S& _val)\
-    \ {\n\t\tassert(idx < N);\n\t\tidx += N;\n\t\tfor(size_t i = height; i >= 1; --i)\
-    \ {\n\t\t\tapply(idx >> i, lazy[idx >> i]);\n\t\t}\n\t\tval[idx] = _val;\n\t\t\
-    while(idx > 1) {\n\t\t\tidx >>= 1;\n\t\t\tupdate(idx);\n\t\t}\n\t}\n\t/**\n\t\
-    \ * @brief \u533A\u9593\u53D6\u5F97[l, r)\n\t */\n\tS get(size_t l, size_t r)\
+    \ te);\n\t\tfor(size_t i = 0; i < v.size(); ++i) {\n\t\t\tval[N + i] = v[i];\n\
+    \t\t}\n\t\tfor(size_t i = N - 1; i >= 1; --i) {\n\t\t\tupdate(i);\n\t\t}\n\t}\n\
+    \t/**\n\t * @brief 1\u70B9\u66F4\u65B0\n\t */\n\tvoid set(size_t idx, const S&\
+    \ _val) {\n\t\tassert(idx < N);\n\t\tidx += N;\n\t\tfor(size_t i = height; i >=\
+    \ 1; --i) {\n\t\t\tapply(idx >> i, lazy[idx >> i]);\n\t\t}\n\t\tval[idx] = _val;\n\
+    \t\twhile(idx > 1) {\n\t\t\tidx >>= 1;\n\t\t\tupdate(idx);\n\t\t}\n\t}\n\t/**\n\
+    \t * @brief \u533A\u9593\u53D6\u5F97[l, r)\n\t */\n\tS get(size_t l, size_t r)\
     \ {\n\t\tassert(l < r and r <= N);\n\t\tl += N;\n\t\tr += N;\n\t\tfor(size_t i\
     \ = height; i >= 1; --i) {\n\t\t\tif((l >> i) << i != l) apply(l >> i, lazy[l\
     \ >> i]);\n\t\t\tif((r >> i) << i != r) apply((r - 1) >> i, lazy[(r - 1) >> i]);\n\
@@ -152,15 +152,15 @@ data:
   isVerificationFile: false
   path: DataStructure/LazySegmentTree.cpp
   requiredBy: []
-  timestamp: '2020-10-03 16:59:39+09:00'
+  timestamp: '2020-10-04 03:22:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/DSL_2_I.test.cpp
-  - test/aoj/DSL_2_H.test.cpp
-  - test/aoj/DSL_2_G.test.cpp
-  - test/aoj/DSL_2_D.test.cpp
-  - test/aoj/DSL_2_E.test.cpp
   - test/aoj/DSL_2_F.test.cpp
+  - test/aoj/DSL_2_E.test.cpp
+  - test/aoj/DSL_2_H.test.cpp
+  - test/aoj/DSL_2_I.test.cpp
+  - test/aoj/DSL_2_D.test.cpp
+  - test/aoj/DSL_2_G.test.cpp
 documentation_of: DataStructure/LazySegmentTree.cpp
 layout: document
 redirect_from:

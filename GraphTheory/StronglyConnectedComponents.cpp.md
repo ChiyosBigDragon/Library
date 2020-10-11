@@ -62,8 +62,8 @@ data:
   timestamp: '2020-03-09 20:54:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/StronglyConnectedComponents.test.cpp
   - test/yosupo/TwoSatisfiability.test.cpp
+  - test/yosupo/StronglyConnectedComponents.test.cpp
 documentation_of: GraphTheory/StronglyConnectedComponents.cpp
 layout: document
 redirect_from:
